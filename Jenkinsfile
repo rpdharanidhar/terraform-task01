@@ -29,7 +29,7 @@ pipeline {
         // }
         stage('Creation stage') {
             steps {
-                bat "D:\\OCI\\DevOps\\terraform\\terraform.exe apply -auto-approve -var-file=D:\\OCI\\DevOps\\terraform\\variables_config.tfvars"
+                bat "D:\\OCI\\DevOps\\terraform\\terraform.exe apply -auto-approve -var-file=variables.tf"
             }
         }
         stage('Cleaning up') {
