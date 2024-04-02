@@ -27,7 +27,7 @@ pipeline {
         //         bat "D:\\OCI\\DevOps\\terraform\\terraform.exe plan"
         //     }
         // }
-        // stage('Creation stage') {
+        stage('Creation stage') {
             steps {
                 bat "D:\\OCI\\DevOps\\terraform\\terraform.exe apply -auto-approve"
             }
