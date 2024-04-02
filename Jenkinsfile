@@ -22,12 +22,12 @@ pipeline {
                 bat "D:\\OCI\\DevOps\\terraform\\terraform.exe validate"
             }
         }
-        stage('To vizualize the resources') {
-            steps {
-                bat "D:\\OCI\\DevOps\\terraform\\terraform.exe plan"
-            }
-        }
-        stage('Creation stage') {
+        // stage('To vizualize the resources') {
+        //     steps {
+        //         bat "D:\\OCI\\DevOps\\terraform\\terraform.exe plan"
+        //     }
+        // }
+        // stage('Creation stage') {
             steps {
                 bat "D:\\OCI\\DevOps\\terraform\\terraform.exe apply -auto-approve"
             }
