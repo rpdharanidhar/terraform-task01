@@ -1,0 +1,28 @@
+# ---
+# - name: Run Terraform
+#   hosts: localhost
+#   gather_facts: false
+#   tasks:
+#     - name: Initialize Terraform
+#       command: terraform init
+#       args:
+#         chdir: '/mnt/d/OCI/DevOps/terraform/k8n-cluster-provision'
+
+#     - name: Apply Terraform changes
+#       command: terraform apply -auto-approve
+#       args:
+#         chdir: '/mnt/d/OCI/DevOps/terraform/k8n-cluster-provision'
+
+---
+- name: Run Terraform
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Initialize Terraform
+      command: "terraform.exe init"
+  
+    - name: Apply Terraform changes
+      command: "terraform.exe apply -auto-approve"
+
+    - name: Apply Terraform changes
+      command: "terraform.exe destroy -auto-approve"
